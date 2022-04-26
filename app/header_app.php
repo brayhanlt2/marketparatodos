@@ -1,6 +1,6 @@
 <?php 
 
-  include __DIR__.'/../../url_tipo.php'; 
+  include __DIR__.'/../url_tipo.php'; 
   include __DIR__.'/../ajax/colores.php';
 
   /*include "../php/versionsonaes.php";
@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom styles for this template -->
-    <link href="5/css/dashboard.css" rel="stylesheet">
-    <link href="5/vistas/css/bttn.min.css" rel="stylesheet" >
-    <link href="5/css/header.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="../vistas/css/bttn.min.css" rel="stylesheet" >
+    <link href="css/header.css" rel="stylesheet">
 
 
     <title>Marketparatodos</title>

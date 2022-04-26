@@ -11,7 +11,7 @@
   
   <div class="card">
     <div class="card-body">
-      <h1 class="color1 text-center mt-1 acercarSubtitulo tamanoMarketparatodos">Marketparatodos 5 PEN</h1>
+      <h1 class="color1 text-center mt-1 acercarSubtitulo tamanoMarketparatodos">Marketparatodos 10 PEN</h1>
       <h4 class="text-center tamanoSubtitulo">RED DE MERCADEO POR SUSCRIPCIÓN</h4>
 
       <h4>Miembros activos en la red <span id="cantidad_actual_participantes">0</span></h4>

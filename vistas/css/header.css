@@ -22,8 +22,25 @@ hr{
 }
 
 
+
+.tamanoBotonesHeader{
+  padding: 8px 15px;
+  font-size: 22px;
+  font-family: inherit;
+}
+.selectHeader{
+  width:130px !important;
+  flex: none !important;
+  color: var(--color1);
+  border-color: var(--color1);
+  border-radius: 0px !important;
+}
+
+
+
 .btn{
     border-radius: 0px;
+    font-weight: 700;
 }
 .btn-primary{
     color: #fff;

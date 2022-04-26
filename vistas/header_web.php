@@ -32,21 +32,8 @@
   </head>
 
   <style>
-    .btn{
-      font-weight: 700;
-    }
-    .tamanoBotonesHeader{
-      padding: 8px 15px;
-      font-size: 22px;
-      font-family: inherit;
-    }
-    .selectHeader{
-      width:120px !important;
-      flex: none !important;
-      color: var(--color1);
-      border-color: var(--color1);
-      border-radius: 0px !important;
-    }
+
+    
   </style>
 
   <body>
@@ -68,7 +55,7 @@
 
               <div class="float-end " style="height:50px;width: 212px;">
                 <div class="input-group input-group-lg " style="justify-content: flex-end;">
-                  <select name="" id="" class="form-select selectHeader" onchange="cambiarPlan();">
+                  <select name="selectPlanID" id="selectPlanID" class="form-select selectHeader" onchange="cambiarPlan(this.value);">
                     <option value="5 PEN">5 PEN</option>
                     <option value="10 PEN" >10 PEN(pronto)</option>
                     <option value="20 PEN" disabled>20 PEN(pronto)</option>

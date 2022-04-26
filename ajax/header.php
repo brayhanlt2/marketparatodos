@@ -7,7 +7,7 @@
 	header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization');
 	require_once "colores.php";
 
-	require_once '../../vendor/autoload.php';
+	require_once '../vendor/autoload.php';
 	MercadoPago\SDK::setAccessToken("TEST-536565519815678-042201-f757c9c7164c33325c251cbb2a7846e9-1105628694");
 
 	require_once "../modelo/header.php";

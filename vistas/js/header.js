@@ -2,6 +2,14 @@ var paginaFueraDeLaVista = false;
 var cardOpcionDeCompra = "basic";
 
 function init(){
+	/*plan*/
+	console.log(localStorage.getItem("plan"));
+	if (localStorage.getItem("plan")===null) {
+		localStorage.setItem("plan", "5 PEN");
+	}else{
+		$("#selectPlanID").val(localStorage.getItem("plan"));
+	}
+
 	/*ano footer*/
 	var dt = new Date();
 	$("#spanAnoFooter").text(dt.getFullYear());
@@ -26,7 +34,20 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 
 function redirigir(val){
-	window.location.href = val;
+	if (val=="home") {
+		var planNum = localStorage.getItem("plan").slice(0, -4);
+		window.location.href = planNum;
+	}else{
+		window.location.href = val;
+	}
+	
+}
+
+function cambiarPlan(val){
+	localStorage.setItem("plan", val);
+	var planNum = val.slice(0, -4);
+	// console.log(planNum);
+	window.location.href = planNum;
 }
 
 /*FORMULARIOS*/
