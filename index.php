@@ -26,6 +26,13 @@
 		}	
 	
 	}else {
-		include 'view_5/vistas/home.php';
+		// include 'view_5/vistas/home.php';
+		$host = $_SERVER['HTTP_HOST'];
+		$ruta = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		$html = '5';
+		$url = "http://$host$ruta/$html";
+		// echo $url;
+		header('Location: '.$url);
+		die();
 	}
 ?>
