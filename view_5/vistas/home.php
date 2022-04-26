@@ -1,6 +1,6 @@
 <?php include 'header_web.php'; ?>
-<link rel="stylesheet" href="vistas/css/home.css">
-<link rel="stylesheet" href="vistas/css/simulador.css">
+<link rel="stylesheet" href="view_5/vistas/css/home.css">
+<link rel="stylesheet" href="view_5/vistas/css/simulador.css">
 
 
 
@@ -838,4 +838,4 @@
 <?php include 'footer_web.php'; ?>
 
 
-<script src="vistas/js/home.js"></script>
+<script src="view_5/vistas/js/home.js"></script>

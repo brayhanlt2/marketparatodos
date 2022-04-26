@@ -1,5 +1,5 @@
 <?php include 'header_web.php'; ?>
-<link rel="stylesheet" href="vistas/css/login.css">
+<link rel="stylesheet" href="view_5/vistas/css/login.css">
 
 
     <nav class="navbar navbar-light bg-light">
@@ -45,4 +45,4 @@
 <?php include 'footer_web.php'; ?>
 
 
-<script src="vistas/js/login.js"></script>
+<script src="view_5/vistas/js/login.js"></script>

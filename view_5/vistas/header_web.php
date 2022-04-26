@@ -1,6 +1,6 @@
 <?php 
 
-  include __DIR__.'/../url_tipo.php'; 
+  include __DIR__.'/../../url_tipo.php'; 
   include __DIR__.'/../ajax/colores.php';
 
   /*include "../php/versionsonaes.php";
@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <link rel="stylesheet" href="vistas/css/bttn.min.css">
-    <link rel="stylesheet" href="vistas/css/header.css">
+    <link rel="stylesheet" href="view_5/vistas/css/bttn.min.css">
+    <link rel="stylesheet" href="view_5/vistas/css/header.css">
 
-    <title>TESO</title>
+    <title>Marketparatodos</title>
   </head>
 
   <style>
@@ -49,7 +49,14 @@
               <button class="bttn-unite bttn-md bttn-primary" data-bs-toggle="modal" data-bs-target="#modalUnirmeRed">QUIERO UNIRME A LA RED</button>
 
               <button class="bttn-unite bttn-md bttn-primary" onclick="redirigir('login');">INICIAR SESIÓN</button>
-            </div>        
+            </div>
+            <div class="text-right">
+              <select name="" id="">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+              </select>
+            </div>
           </div>
           
       </div>

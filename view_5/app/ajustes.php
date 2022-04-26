@@ -17,4 +17,4 @@
 <?php include 'footer_app.php'; ?>
 
 
-<script src="js/ajustes.js"></script>
+<script src="5/js/ajustes.js"></script>

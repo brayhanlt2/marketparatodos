@@ -17,7 +17,7 @@
 
 
 	// SDK de Mercado Pago
-	require '../vendor/autoload.php';
+	require '../../vendor/autoload.php';
 	// Agrega credenciales
 	MercadoPago\SDK::setAccessToken('TEST-3913615103243260-031102-74d4030d3061514bc70512bd36812971-156933890');
 	

@@ -32,7 +32,7 @@ function init(){
 
 function cantidad_actual_participantes(){
 	$.post(url_nivel_1+'ajax/home.php?op=cantidad_actual_participantes', function(r) {
-		// console.log(r)
+		console.log(r)
 		$("#cantidad_actual_participantes").text(r);
 	});
 }

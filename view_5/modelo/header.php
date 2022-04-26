@@ -1,6 +1,6 @@
 <?php 
 
-	require "../config/conexion.php";
+	require "../../config/conexion.php";
 
 	Class Header {
 
