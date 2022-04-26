@@ -1,0 +1,361 @@
+:root {
+  --colorCaja: #DBDBDB;
+  --colorCajaSeleccionado: var(--color1);
+  --black: var(--color1);
+  }
+  ol {
+  list-style: none;
+  padding-left: 0px !important;
+  }
+  .container-organigrama {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  border: 3px solid var(--color1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  }
+  .rectangle {
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  background: var(--colorCaja);
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid var(--color1);
+  }
+  .rectangle.seleccionado {
+    background: var(--colorCajaSeleccionado);
+    color: white !important;
+    border: 1px solid var(--color1);
+  }
+  .rectangle:hover {
+    background: var(--colorCajaSeleccionado);
+    color: white;
+    border: 1px solid var(--color1);
+  }
+
+
+
+
+  /*CUSTOM VARIABLES HERE NIVEL1*/
+  .level-1 {
+      width: 450px;
+      margin: 0 auto 40px;
+  }
+  .level-1::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+
+
+
+  /*CUSTOM VARIABLES HERE NIVEL2*/
+  .level-2-wrapper {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .linea_divisoria{
+    border-top: 2px solid var(--color1);
+    width: 50%;
+    padding-bottom: 18px;
+  }
+  .level-2-wrapper::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: 25%;
+      width: 50%;
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-2-wrapper::after {
+      display: none;
+      content: "";
+      position: absolute;
+      left: -20px;
+      bottom: -20px;
+      width: 100%;
+      height: 2px;
+      background: var(--black);
+  }
+  .level-2-wrapper li {
+      position: relative;
+  }
+  .level-2-wrapper > li::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-2 {
+      width: 150px;
+      margin: 0 auto 19px;
+  }
+  .level-2::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-2::after {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-100%, -50%);
+      width: 20px;
+      height: 2px;
+      background: var(--black);
+  }
+
+
+
+  /*CUSTOM VARIABLES HERE NIVEL3*/
+  /**/  
+  .level-3-wrapper_0 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 200px;
+      margin: 0 auto;
+  }
+  .linea_divisoria_2_0{
+    border-top: 2px solid var(--color1);
+    width: 110px;
+    padding-bottom: 18px;
+  }
+  .linea_divisoria_2_1{
+    border-top: 2px solid var(--color1);
+    width: 110px;
+    padding-bottom: 18px;
+  }
+  .linea_divisoria_2_2{
+    border-top: 2px solid var(--color1);
+    width: 110px;
+    padding-bottom: 18px;
+  }
+  .linea_divisoria_2_3{
+    border-top: 2px solid var(--color1);
+    width: 110px;
+    padding-bottom: 18px;
+  }
+  .linea_divisoria_2_4{
+    border-top: 2px solid var(--color1);
+    width: 110px;
+    padding-bottom: 18px;
+  }
+  .level-3-wrapper_0::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(25% - 5px);
+      width: calc(50% + 10px);
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-3-wrapper_0 > li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-3_0 {
+      margin-bottom: 20px;
+  }
+
+  /**/  
+  .level-3-wrapper_1 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 200px;
+      margin: 0 auto;
+  }
+  .level-3-wrapper_1::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(25% - 5px);
+      width: calc(50% + 10px);
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-3-wrapper_1 > li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-3_1 {
+      margin-bottom: 20px;
+  }
+
+  /**/  
+  .level-3-wrapper_2 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 200px;
+      margin: 0 auto;
+  }
+  .level-3-wrapper_2::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(25% - 5px);
+      width: calc(50% + 10px);
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-3-wrapper_2 > li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-3_2 {
+      margin-bottom: 20px;
+  }
+
+  /**/  
+  .level-3-wrapper_3 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 200px;
+      margin: 0 auto;
+  }
+  .level-3-wrapper_3::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(25% - 5px);
+      width: calc(50% + 10px);
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-3-wrapper_3 > li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-3_3 {
+      margin-bottom: 20px;
+  }
+
+  /**/  
+  .level-3-wrapper_4 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 200px;
+      margin: 0 auto;
+  }
+  .level-3-wrapper_4::before {
+      /*content: "";
+      position: absolute;
+      top: -20px;
+      left: calc(25% - 5px);
+      width: calc(50% + 10px);
+      height: 2px;
+      background: var(--black);*/
+  }
+  .level-3-wrapper_4 > li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 20px;
+      background: var(--black);
+  }
+  .level-3_4 {
+      margin-bottom: 20px;
+  }
+
+
+
+  /*CUSTOM VARIABLES HERE NIVEL4*/
+  .level-4-wrapper {
+      position: relative;
+      width: 80px;
+      margin-left: auto;
+  }
+  .level-4-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -11px;
+      width: 2px;
+      height: calc(100% + 20px);
+      background: var(--black);
+  }
+  .level-4-wrapper li + li {
+      margin-top: 20px;
+  }
+  .level-4 {
+      font-weight: normal;
+      font-size: 12px;
+      padding: 0px;
+  }
+  .level-4::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-100%, -50%);
+      width: 10px;
+      height: 2px;
+      background: var(--black);
+  }
+
+
+
+
+
+
+
+  .badgeRed{
+    padding: 5px 10px 5px 10px;
+  }

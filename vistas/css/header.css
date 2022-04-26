@@ -1,0 +1,156 @@
+:root {
+--color1: #1d89ff;
+}
+.text20{
+  font-size: 20px;
+}
+small{
+    color: #989898;
+}
+hr{
+  margin: 0px;
+}
+.color1{
+  color: var(--color1);
+  font-weight: 900;
+}
+.card{
+  /*border: 1px solid var(--color1);*/
+}
+.table{
+  border-color: var(--color1);
+}
+
+
+.btn{
+    border-radius: 0px;
+}
+.btn-primary{
+    color: #fff;
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+.bttn-unite{
+    border-radius: 0px;
+}
+
+
+/*navbar*/
+.navbar{
+  font-weight: 900;
+  border-bottom:  5px solid var(--color1);
+  background-color: white;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.container{
+  margin-top: 120px;
+}
+
+.pr-0{
+  padding-right: 0px;
+}
+.pl-0{
+  padding-left: 0px;
+}
+.pt5px{
+  padding-top: 5px;
+}
+
+
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 300px;
+}
+/*footer*/
+.footer-basic {
+  padding:40px 0;
+  background-color: white;
+  color:#4b4c4d;
+  border-top: 5px solid var(--color1);
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul i {
+  color: var(--color1);
+  text-decoration:none;
+  opacity:0.8;
+}
+.footer-basic ul a {
+  text-decoration:none;
+  color: var(--color1);
+}
+
+.footer-basic ul i:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > i {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color: var(--color1);
+  opacity:0.75;
+}
+
+.footer-basic .social > i:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color: var(--color1);
+  margin-bottom:0;
+}
+
+/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+
+
+.cardOpcionDeCompraClass:hover{
+  background-color: #E9ECEF;
+  cursor: pointer;
+}
+.cardOpcionDeCompraClass_seleccionado{
+  background-color: #E9ECEF;
+  border: .5px solid var(--color1);
+}
