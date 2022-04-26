@@ -31,8 +31,9 @@
 
 <script>
 	function cerrarSesion(){
-		localStorage.clear();
-		window.location.href="../";	
+		localStorage.removeItem("token");
+		var planNum = localStorage.getItem("plan").slice(0, -4);
+		window.location.href="../"+planNum;
 	}
 	function mantenemos_la_sesion(){
 		$("#divLoader").fadeOut( "slow", function() {
