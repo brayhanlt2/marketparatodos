@@ -11,7 +11,9 @@
   
   <div class="card">
     <div class="card-body">
-      <h1 class="color1 text-center mt-1">NUEVA RED DE MERCADEO POR SUSCRIPCIÓN</h1>
+      <h1 class="color1 text-center mt-1 acercarSubtitulo tamanoMarketparatodos">Marketparatodos</h1>
+      <h4 class="text-center tamanoSubtitulo">RED DE MERCADEO POR SUSCRIPCIÓN</h4>
+
       <h4>Miembros activos en la red <span id="cantidad_actual_participantes">0</span></h4>
     </div>
   </div>
@@ -32,8 +34,8 @@
   <div class="card mt-2">
     <div class="card-body">
 
-      <h1 class="color1 text-center masRazones">MÁS RAZONES</h1>
-      <h4 class="text-center masRazonesSub">PARA ESTAR JUNTOS A TESO</h4>
+      <h1 class="color1 text-center acercarSubtitulo">MÁS RAZONES</h1>
+      <h4 class="text-center tamanoSubtitulo">PARA ESTAR JUNTOS A TESO</h4>
 
       <div class="row mt-5">
         <div class="col-3">
@@ -75,8 +77,8 @@
       <div class="card-body">
         <div class="row">
           <div class="col-12 text-left">
-            <h1 class="color1 text-center masRazones">SIMULADOR</h1>
-            <h4 class="text-center masRazonesSub">SIMULA TU GANANCIA</h4>
+            <h1 class="color1 text-center acercarSubtitulo">SIMULADOR</h1>
+            <h4 class="text-center tamanoSubtitulo">SIMULA TU GANANCIA</h4>
           </div>
           <div class="col-12 text-center mt-4">
               
@@ -109,7 +111,7 @@
 
           <div class="container-organigrama mt-5">
             <div class="float-start">
-              <div class="nivelJerarquicoDiv">NIVEL JERÁRQUICO EJEMPLO : <span id="nivelJerarquicoSpan"></span></div>
+              <div class="nivelJerarquicoDiv">Nivel jerárquico de ejemplo: <span id="nivelJerarquicoSpan"></span></div>
             </div>
             <div class="float-end">
               <button class="bttn-unite bttn-primary" onclick="agragarFilaOrganigrama();" data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar usuario"><i class="fa-solid fa-user-plus"></i></button>

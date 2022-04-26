@@ -44,7 +44,7 @@
 
           <div class="col-12">
             <div class="navbar-brand mb-0 h1 text-center">
-              <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('home');">TESO</button>
+              <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('home');">Marketparatodos</button>
 
               <button class="bttn-unite bttn-md bttn-primary" data-bs-toggle="modal" data-bs-target="#modalUnirmeRed">QUIERO UNIRME A LA RED</button>
 

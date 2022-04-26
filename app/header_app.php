@@ -37,7 +37,7 @@
     <link href="css/header.css" rel="stylesheet">
 
 
-    <title>TESO</title>
+    <title>Marketparatodos</title>
 
     <script>
       var token = localStorage.getItem("token");
@@ -55,7 +55,7 @@
     
 
     <div class="w-100 text-center">
-      <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('resumen');">TESO</button>
+      <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('resumen');">Marketparatodos</button>
     </div>
 
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-right pointer" style="height: 72px;" onclick="cerrarSesion();"><span style="position: absolute;top: 1.2rem;right: 1rem;"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</span></a>

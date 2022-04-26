@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="display: none;">
   <div class="card mt-2">
     
     <div class="row">

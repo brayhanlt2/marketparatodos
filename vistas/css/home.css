@@ -3,10 +3,13 @@
 }
 
 
-.masRazones{
+.tamanoMarketparatodos{
+  font-size: 47px;
+}
+.acercarSubtitulo{
   margin-bottom: -5px;
 }
-.masRazonesSub{
+.tamanoSubtitulo{
   font-size: 1.4rem;
 }
 
