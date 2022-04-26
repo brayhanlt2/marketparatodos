@@ -2,37 +2,46 @@
 	if (isset($_GET['vista'])) {
 
 		$views = explode("/", $_GET['vista']);
-		var_dump($views);
+		// var_dump($views);
 
 		if (!isset($views[1])) {
 			$views[1] = "";
 		}
+		if (!isset($views[2])) {
+			$views[2] = "";
+		}
 
+	
 
+		if ($views[0]=="5") {
+			include 'view_5/home.php';
 
-		if (is_file('view_5/vistas/'.$views[0].'.php')) {
-			
-			include 'view_5/vistas/'.$views[0].'.php';
+		}else if ($views[0]=="10") {
+			include 'view_10/home.php';
 
-
-		}elseif (is_file('view_5/app/'.$views[1].'.php')) {
-			
-			include 'view_5/app/'.$views[1].'.php';
-
-
-
+		}else if (is_file('vistas/'.$views[0].'.php')) {			
+			include 'vistas/'.$views[0].'.php';
+		
+		}else if (is_file('app/'.$views[1].'.php')) {			
+			include 'app/'.$views[1].'.php';
+		
 		}else{
-			include 'view_5/vistas/home.php';
-		}	
+			// echo "GAAAAA";
+			include 'view_5/home.php';
+		}
+
+			
 	
 	}else {
-		// include 'view_5/vistas/home.php';
-		$host = $_SERVER['HTTP_HOST'];
+		include 'view_5/home.php';
+
+		/*REDIRECCION*/
+		/*$host = $_SERVER['HTTP_HOST'];
 		$ruta = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 		$html = '5';
 		$url = "http://$host$ruta/$html";
 		// echo $url;
 		header('Location: '.$url);
-		die();
+		die();*/
 	}
 ?>
