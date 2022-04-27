@@ -59,6 +59,7 @@ function guardarRegistrateEmail_unirme(e){
     $("#btnGifRegistrateEmail_unirme").show();
 
     var formData = new FormData($("#formRegistrateEmail_unirme")[0]);
+    formData.append('plan',localStorage.getItem("plan").slice(0, -4));
 
     $.ajax({
       url: url_nivel_1 + "ajax/header.php?op=guardarRegistrateEmail_unirme",

@@ -1,4 +1,4 @@
-<div class="container" style="display: none;">
+<div class="container" style="">
   <div class="card mt-2">
     
     <div class="row">
@@ -156,7 +156,7 @@
 
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
-   const mp = new MercadoPago('TEST-6507fec8-9f97-41c6-a910-cf893bb89b13');
+   const mp = new MercadoPago('TEST-61adc3aa-4470-4897-8fc1-10f7464e8183');
    // Add step #3
 
    // Step #3

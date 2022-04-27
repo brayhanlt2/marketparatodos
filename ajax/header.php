@@ -8,7 +8,7 @@
 	require_once "colores.php";
 
 	require_once '../vendor/autoload.php';
-	MercadoPago\SDK::setAccessToken("TEST-536565519815678-042201-f757c9c7164c33325c251cbb2a7846e9-1105628694");
+	MercadoPago\SDK::setAccessToken("TEST-2795406219863778-042616-84ce60f51d5f0bcac965b23812bc9242-1113233354");
 
 	require_once "../modelo/header.php";
 	$header = new Header();
@@ -48,10 +48,7 @@
 
 
 
-	$email_unirme = isset($_POST["email_unirme"])?limpiarCadena($_POST["email_unirme"]):"";
-	$contra_unirme = isset($_POST["contra_unirme"])?limpiarCadena($_POST["contra_unirme"]):"";
-	$nombre_red_unirme = isset($_POST["nombre_red_unirme"])?limpiarCadena($_POST["nombre_red_unirme"]):"";
-	$red_yaexistente_unirme = isset($_POST["red_yaexistente_unirme"])?limpiarCadena($_POST["red_yaexistente_unirme"]):"";
+	
 
 
 
@@ -63,6 +60,13 @@
 		/*FUERA DEL SISTEMA*/
 		/*FUERA DEL SISTEMA*/
 		case 'guardarRegistrateEmail_unirme':
+			$email_unirme = isset($_POST["email_unirme"])?limpiarCadena($_POST["email_unirme"]):"";
+			$contra_unirme = isset($_POST["contra_unirme"])?limpiarCadena($_POST["contra_unirme"]):"";
+			$nombre_red_unirme = isset($_POST["nombre_red_unirme"])?limpiarCadena($_POST["nombre_red_unirme"]):"";
+			$red_yaexistente_unirme = isset($_POST["red_yaexistente_unirme"])?limpiarCadena($_POST["red_yaexistente_unirme"]):"";
+			$plan = isset($_POST["plan"])?limpiarCadena($_POST["plan"]):"";
+
+			
 			if (!empty($email_unirme) and !empty($contra_unirme) and !empty($nombre_red_unirme)) {
 				
 				$redAleatoriaEscogida = false;
@@ -130,7 +134,7 @@
 							$cantidad_trabajadores = $reg->cantidad_trabajadores;
 							$rama = $reg->rama;
 							
-							$idnuevousuario = $header->guardarRegistrateEmail_registrar($email_unirme,$contra_unirme,$nombre_red_unirme);
+							$idnuevousuario = $header->guardarRegistrateEmail_registrar($email_unirme,$contra_unirme,$nombre_red_unirme,$plan);
 							
 							if($idnuevousuario){
 

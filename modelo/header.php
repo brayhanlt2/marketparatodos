@@ -45,8 +45,8 @@
 		}
 
 
-		public function guardarRegistrateEmail_registrar($email,$contra,$nombre_red) {
-			$sql = "INSERT INTO usuario (email,email_estado,password,nombre_red,tipo_usuario,tipo_cuenta,cuenta_estado) VALUES ('$email','Verificado','$contra','$nombre_red','usuario','basic','pendiente')";
+		public function guardarRegistrateEmail_registrar($email,$contra,$nombre_red,$plan) {
+			$sql = "INSERT INTO usuario (email,email_estado,password,nombre_red,tipo_usuario,tipo_cuenta,cuenta_estado,plan_".$plan.") VALUES ('$email','Verificado','$contra','$nombre_red','usuario','basic','pendiente',1)";
 			return ejecutarConsulta_retornarID($sql);
 		}
 
