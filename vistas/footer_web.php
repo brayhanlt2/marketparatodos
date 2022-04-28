@@ -156,7 +156,7 @@
 
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
-   const mp = new MercadoPago('TEST-61adc3aa-4470-4897-8fc1-10f7464e8183');
+   const mp = new MercadoPago('APP_USR-f797e6c8-bc63-4368-89eb-7bf2c2037bc4');
    // Add step #3
 
    // Step #3

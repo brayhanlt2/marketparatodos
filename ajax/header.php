@@ -8,7 +8,7 @@
 	require_once "colores.php";
 
 	require_once '../vendor/autoload.php';
-	MercadoPago\SDK::setAccessToken("TEST-2795406219863778-042616-84ce60f51d5f0bcac965b23812bc9242-1113233354");
+	MercadoPago\SDK::setAccessToken("APP_USR-2795406219863778-042616-97026d3e3cd399cf7067b188393e021f-1113233354");
 
 	require_once "../modelo/header.php";
 	$header = new Header();
@@ -209,7 +209,6 @@
 
 			$dataPago = json_decode($_POST["dataPago"],true);
 		    var_dump($dataPago);
-		    var_dump($dataPago["token"]);
 
 
 		    /*INTENTO 1*/
@@ -242,22 +241,32 @@
 
 
 			/*INTENTO 2*/
-			/*$preapproval_data = new MercadoPago\Preapproval();
+			$payment = new MercadoPago\Payment();
+		    $payment->transaction_amount = 100;
+		    $payment->token = $dataPago['token'];
+		    $payment->description = "VIP";
+		    $payment->installments = 1;
+		    $payment->payment_method_id = $dataPago['payment_method_id'];
+		    $payment->issuer_id = (int)$dataPago['issuer_id'];
 
-		    $preapproval_data->payer_email = $dataPago["payer"]["email"];
-		    $preapproval_data->back_url = "http://www.my-site.com";
-		    $preapproval_data->reason = "Suscripción mensual a la red TESO";
-		    $preapproval_data->external_reference = "OP-1234";
-		    $preapproval_data->auto_recurring = array( 
-		        "frequency" => 1,
-		        "frequency_type" => "months",
-		        "transaction_amount" => 5,
-		        "currency_id" => "PEN", // your currency
+		    $payer = new MercadoPago\Payer();
+		    $payer->email = $dataPago['payer']['email'];
+		    $payer->identification = array(
+		        "type" => $dataPago['payer']['identification']['type'],
+		        "number" => $dataPago['payer']['identification']['number']
 		    );
+		    $payer->first_name = $dataPago['payer']['name'];
+		    $payment->payer = $payer;
 
-		    $preapproval_data->save();
+		    $payment->save();
 
-		    var_dump($preapproval_data);*/
+		    $response = array(
+		        'status' => $payment->status,
+		        'status_detail' => $payment->status_detail,
+		        'id' => $payment->id
+		    );
+		    echo json_encode($response);
+
 		break;
 		/*case 'crearUsuarioDePrueba':		
 
