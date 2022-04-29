@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="vistas/css/header.css">
 
     <title>Marketparatodos</title>
-    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="public/img/logo.png">
+    <link rel="icon" href="public/img/logo.png">
   </head>
 
   <style>

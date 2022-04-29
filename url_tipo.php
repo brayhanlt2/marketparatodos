@@ -7,9 +7,9 @@
 		url_nivel_3="../../";
 
 	}else{
-		url_nivel_1="https://www.teso.com/";
-		url_nivel_2="https://www.teso.com/";
-		url_nivel_3="https://www.teso.com/";
+		url_nivel_1="https://www.marketparatodos.com/";
+		url_nivel_2="https://www.marketparatodos.com/";
+		url_nivel_3="https://www.marketparatodos.com/";
 
 	}
 </script>
