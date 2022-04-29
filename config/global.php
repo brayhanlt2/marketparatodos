@@ -4,17 +4,17 @@
 	define("DB_HOST","localhost");
 
 	//Nombre de la base de datos
-	define("DB_NAME", "teso");
+	define("DB_NAME", "marketparatodos");
 
 	//Usuario de la base de datos
 	define("DB_USERNAME", "root");
 
 	//Contraseña del usuario de la base de datos
-	define("DB_PASSWORD", "");
+	define("DB_PASSWORD", "10209109377Aa");
 
 	//definimos la codificación de los caracteres
 	define("DB_ENCODE","utf8");
 
 	//Definimos una constante como nombre del proyecto
-	define("PRO_NOMBRE","teso");
+	define("PRO_NOMBRE","marketparatodos");
  ?>
