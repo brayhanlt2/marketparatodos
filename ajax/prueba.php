@@ -9,6 +9,9 @@
 
 
 
+	require_once "../modelo/login.php";
+	$login = new Login();
+
 
 
 	$email = isset($_POST["email"])?limpiarCadena($_POST["email"]):"";
@@ -28,6 +31,15 @@
 		      echo "El archivo ha sido creado";
 
 		    fclose($archivo);   // Cerrar el archivo
+
+		break;
+
+		case 'prueba':
+			echo "desde ajax ctm";
+
+			$rspta = $login->prueba();
+			$reg=$rspta->fetch_object();
+			var_dump($reg->cont);
 
 		break;
 
