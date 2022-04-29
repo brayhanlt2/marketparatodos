@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="vistas/css/header.css">
 
     <title>Marketparatodos</title>
+    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
   </head>
 
   <style>
@@ -45,7 +46,7 @@
             <div class="navbar-brand mb-0 h1 text-center">
               <div class="float-start " style="height:50px;">
                 <div class="input-group input-group-lg">
-                  <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('home');">Marketparatodos</button>
+                  <button class="bttn-stretch bttn-lg bttn-primary" onclick="redirigir('home');"> <img src="public/img/logo_pequeno.png" alt="Marketparatodos" height="30px"> Marketparatodos</button>
                 </div>
               </div>              
 

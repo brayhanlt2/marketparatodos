@@ -33,6 +33,7 @@
 			
 	
 	}else {
+		// var_dump("GAAA");
 		include 'view_5/home.php';
 
 		/*REDIRECCION*/
