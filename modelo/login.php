@@ -27,10 +27,6 @@
 		
 
 
-		public function prueba() {
-			$sql = "SELECT count(*) as cont from usuario ";
-			return ejecutarConsulta($sql);
-		}
 		
 
 

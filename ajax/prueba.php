@@ -9,8 +9,8 @@
 
 
 
-	require_once "../modelo/login.php";
-	$login = new Login();
+	require_once "../modelo/prueba.php";
+	$prueba = new Prueba();
 
 
 
@@ -37,7 +37,7 @@
 		case 'prueba':
 			echo "desde ajax ctm";
 
-			$rspta = $login->prueba();
+			$rspta = $prueba->prueba();
 			$reg=$rspta->fetch_object();
 			var_dump($reg->cont);
 
