@@ -8,7 +8,7 @@
 	require_once "colores.php";
 
 	require_once '../vendor/autoload.php';
-	MercadoPago\SDK::setAccessToken("APP_USR-2795406219863778-042616-97026d3e3cd399cf7067b188393e021f-1113233354");
+	MercadoPago\SDK::setAccessToken("APP_USR-8104791343627101-050218-0bec40c92d0a7b810856a95958951d0f-1116632075");
 
 	require_once "../modelo/header.php";
 	$header = new Header();
@@ -266,7 +266,6 @@
 		        'id' => $payment->id
 		    );
 		    echo json_encode($response);
-
 		break;
 		/*case 'crearUsuarioDePrueba':		
 
