@@ -264,7 +264,7 @@
                             },
                           })};
 
-          $.post(url_nivel_1+'ajax/header.php?op=process_payment',dataPago, function(r) {
+          $.post(url_nivel_1+'ajax/mercadopago.php?op=pagarVIP',dataPago, function(r) {
             console.log(r);
           });
         },
