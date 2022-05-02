@@ -77,30 +77,20 @@
 		    );
 		    echo json_encode($response);
 		break;
-		/*case 'crearUsuarioDePrueba':		
+		
+		case 'crearUsuarioDePrueba':
 
-			$url = 'https://api.mercadopago.com/users/test_user';
-			$headers = [
-			  'Accepts: application/json',
-			  'Authorization: Bearer TEST-536565519815678-042201-f757c9c7164c33325c251cbb2a7846e9-1105628694',
-			];
+			$customer = new MercadoPago\Customer();
+			$customer->email = "test_payer_12345@testuser.com";
+			$customer->save();
 
-			$curl = curl_init(); 
-
-			curl_setopt_array($curl, array(
-			  CURLOPT_URL => $url,
-			  CURLOPT_HTTPHEADER => $headers,
-			  CURLOPT_RETURNTRANSFER => 1,
-			  CURLOPT_POST => 1,
-			  CURLOPT_POSTFIELDS => '{"site_id":"MPE"}'
-			));
-
-			$response = curl_exec($curl);
-			curl_close($curl);
-
-			$data = json_decode($response,true);
-			var_dump($data);
-		break;*/
+			$card = new MercadoPago\Card();
+			$card->token = "9b2d63e00d66a8c721607214cedaecda";
+			$card->customer_id = $customer->id();
+			$card->issuer = array("id" => "3245612");
+			$card->payment_method = array("id" => "debit_card");
+			$card->save();
+		break;
 
 
 
