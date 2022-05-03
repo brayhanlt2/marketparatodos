@@ -80,7 +80,7 @@
 		
 		case 'crearCliente':
 			$customer = new MercadoPago\Customer();
-			$customer->email = "test_payer_12345@testuser.com";
+			$customer->email = "test_user_67596313@testuser.com";
 			$customer->save();
 
 			var_dump($customer);
