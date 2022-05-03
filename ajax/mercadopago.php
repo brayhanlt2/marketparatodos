@@ -78,18 +78,12 @@
 		    echo json_encode($response);
 		break;
 		
-		case 'crearUsuarioDePrueba':
-
+		case 'crearCliente':
 			$customer = new MercadoPago\Customer();
 			$customer->email = "test_payer_12345@testuser.com";
 			$customer->save();
 
-			$card = new MercadoPago\Card();
-			$card->token = "9b2d63e00d66a8c721607214cedaecda";
-			$card->customer_id = $customer->id();
-			$card->issuer = array("id" => "3245612");
-			$card->payment_method = array("id" => "debit_card");
-			$card->save();
+			var_dump($customer);
 		break;
 
 
