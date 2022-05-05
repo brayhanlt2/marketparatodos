@@ -8,9 +8,15 @@
 	require_once "colores.php";
 
 	require_once '../vendor/autoload.php';
-	MercadoPago\SDK::setAccessToken("APP_USR-8104791343627101-050218-0bec40c92d0a7b810856a95958951d0f-1116632075");
+	MercadoPago\SDK::setAccessToken("TEST-6956734717679363-050423-b7751158d22916b3c1d94cd5d757ae47-1118151824");
 
 
+
+	function getProtectedValue( $object, $prop_name ) { 
+        $array = ( array ) $object;
+        $prefix = chr( 0 ) . '*' . chr( 0 );
+        return $array[ $prefix . $prop_name ];
+    }
 
 
 	switch ($_GET["op"]) {
@@ -20,70 +26,77 @@
 			$dataPago = json_decode($_POST["dataPago"],true);
 		    var_dump($dataPago);
 
+		    echo "\n";
+		    echo "\n";
 
-		    /*INTENTO 1*/
-		    /*$url = 'https://api.mercadopago.com/preapproval';
-			$headers = [
-			  'Content-Type: application/json',
-			  'Authorization: Bearer TEST-536565519815678-042201-f757c9c7164c33325c251cbb2a7846e9-1105628694',
-			];
+		    $customer = new MercadoPago\Customer();
+			$customer->email = $dataPago["payer"]["email"];
+			$customer->save();
 
-			$curl = curl_init();
-			curl_setopt_array($curl, array(
-			  CURLOPT_URL => $url,
-			  CURLOPT_HTTPHEADER => $headers,
-			  CURLOPT_RETURNTRANSFER => 1,
-			  CURLOPT_POST => 1,
-			  CURLOPT_POSTFIELDS => '{
-									   "preapproval_plan_id":"2c938084804da16001804eee311f0030",
-									   "card_token_id":"'.$dataPago["token"].'",
-									   "payer_email":"'.$dataPago["payer"]["email"].'",
-									   "status": "authorized",
-									}'
-			));
-			$response = curl_exec($curl);
-			curl_close($curl);
-			$data = json_decode($response,true);
-			var_dump($data);*/
+			$customerId = getProtectedValue($customer,"id");
+
+		    echo "\n";
+		    echo "\n";
+
+			$card = new MercadoPago\Card();
+			$card->token = $dataPago["token"];
+			$card->customer_id = $customerId;
+			$card->issuer = array("id" => $dataPago["issuer_id"]);
+			$card->payment_method = array("id" => $dataPago["payment_method_id"]);
+			$card->save();
+		    var_dump($card);
 
 
-
-
-
-			/*INTENTO 2*/
-			$payment = new MercadoPago\Payment();
-		    $payment->transaction_amount = 100;
-		    $payment->token = $dataPago['token'];
-		    $payment->description = "VIP";
-		    $payment->installments = 1;
-		    $payment->payment_method_id = $dataPago['payment_method_id'];
-		    $payment->issuer_id = (int)$dataPago['issuer_id'];
-
-		    $payer = new MercadoPago\Payer();
-		    $payer->email = $dataPago['payer']['email'];
-		    $payer->identification = array(
-		        "type" => $dataPago['payer']['identification']['type'],
-		        "number" => $dataPago['payer']['identification']['number']
+		    $payment = new MercadoPago\Payment();
+			$payment->transaction_amount = 100;
+			$payment->token = $dataPago["token"];
+			$payment->installments = 1;
+			$payment->payer = array(
+		        "type" => "customer",
+		        "id" => $customerId
 		    );
-		    $payer->first_name = $dataPago['payer']['name'];
-		    $payment->payer = $payer;
+			$payment->save();
+			var_dump($payment);
 
-		    $payment->save();
 
-		    $response = array(
-		        'status' => $payment->status,
-		        'status_detail' => $payment->status_detail,
-		        'id' => $payment->id
-		    );
-		    echo json_encode($response);
 		break;
 		
+
+
+
+
+
+
+
+
+
+
+
 		case 'crearCliente':
 			$customer = new MercadoPago\Customer();
 			$customer->email = "test_user_67596313@testuser.com";
 			$customer->save();
 
 			var_dump($customer);
+		break;
+
+		case 'buscarClientes':
+			/*$filters = array(
+				"id"=>"247711297-jxOV430go9fx2e"
+			);*/
+
+			$customers = MercadoPago\Customer::search();
+			var_dump($customers);
+		break;
+
+		case 'guardarTarjeta':
+			$card = new MercadoPago\Card();
+			$card->token = "";
+			$card->customer_id = "1118152772-uKW07frQDbGCUC";
+			$card->issuer = array("id" => "");
+			$card->payment_method = array("id" => "");
+			$card->save();
+			var_dump($card);
 		break;
 
 
